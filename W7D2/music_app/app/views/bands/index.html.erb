@@ -1,0 +1,10 @@
+<h1> All the Bands!!!!</h1>
+
+    <% if @bands.nil? %>
+       <p>Bands are empty :(</p> 
+       <%end%>
+    <% @bands.each do |band|%>
+        <p><%= band.name %></p>
+        <%end%>
+
+<a href="<%= new_band_url%>">Enter a New Band!!</a>
