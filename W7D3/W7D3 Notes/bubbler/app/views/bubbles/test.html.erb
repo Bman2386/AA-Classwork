@@ -1,0 +1,16 @@
+<h1>Hello!</h1>
+
+<%= "I'm a printing erb tag" %>
+<% print "I'm a non-printing erb tag being printed to the server log" %>
+
+<p class="<%#= user.admin ? "red" : "green" %>"></p>
+
+<% arr = ["apple", "banana", "cantspellelope"] %>
+
+<ul>
+    <% arr.each do |fruit| %>
+        <li class="<%= fruit %>">
+            <% fruit %>
+        </li>
+    <% end %>
+</ul>

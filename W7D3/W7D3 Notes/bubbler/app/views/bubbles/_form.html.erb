@@ -1,0 +1,22 @@
+<% if is_edit %>
+    <% action = bubble_url(bubble) %>
+    <% button_text = "Edit your bubble!" %>
+<% else %>
+    <% action = bubbles_url %>
+    <% button_text = "Blub it" %>
+<% end %>
+
+<form action="<%= action %>" method="post">
+    <!-- form_authenticity_token is built in rails method -->
+    <!-- include this whole input in every single form (everything that makes a non-get req) -->
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <% if is_edit %>
+        <input type="hidden" name="_method" value="patch">
+    <% end %>
+
+    <label for="body">Body: </label><br>
+    <input type="text" name="bubble[body]" id="body" value="<%= bubble.body %>">
+    <br><br>
+    <input type="submit" value="<%= button_text %>">
+</form>

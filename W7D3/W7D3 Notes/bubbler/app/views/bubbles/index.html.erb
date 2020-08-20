@@ -1,0 +1,11 @@
+<h1>All of the bubbles!</h1>
+<a href="<%= new_bubble_url %>"><h2>Blow a new Bubble!</h2></a>
+<ul>
+    <% @bubbles.each do |bubble| %>
+        <li>
+            <a href="<%= bubble_url(bubble.id) %>">
+                <%= bubble.body %> : <%= bubble.author.username %>
+            </a>
+        </li>
+    <% end %>
+</ul>

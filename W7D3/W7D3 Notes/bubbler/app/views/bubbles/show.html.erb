@@ -1,0 +1,10 @@
+<h1>One Single Bubble</h1>
+
+<p><%= @bubble.body %></p>
+<p>Blubbed by: <%= @bubble.author.username %></p>
+<a href="<%= edit_bubble_url(@bubble) %>">Edit this bubble</a>
+<form action="<%= bubble_url(@bubble) %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete your bubble</button>
+</form>
+<a href="<%= bubbles_url %>"><- Back to Index</a>
