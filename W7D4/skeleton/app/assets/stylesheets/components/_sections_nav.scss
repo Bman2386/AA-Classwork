@@ -1,0 +1,20 @@
+ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+ul li a {
+    color: black;
+}
+
+ul li a:hover {
+    background: $light-gray;
+    
+}
+
+.all_tab:hover{
+    background: white;
+    text-decoration: underline;
+}
+

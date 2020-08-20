@@ -1,0 +1,64 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    font-variant: small-caps;
+    border-bottom: 1px solid $light-gray;
+    // border-radius: 15px;  cunfusions
+}
+
+.left-nav > ul,
+.right-nav > ul {
+    
+}
+
+.left-nav > ul > li {
+    display: inline-block;
+    margin: 5px;
+    font-weight: 600;
+    padding-top: 5px;
+    // justify-content: flex-start;
+}
+
+
+.right-nav > ul > li {
+    display: inline-block;
+    
+  
+}
+
+.right-nav > ul > li > button {
+    border-radius: 7px;
+    margin: 5px;
+    background-color: $light-blue;
+    color: white;
+    font-weight: 800;
+    padding: 5px;
+    font-variant: small-caps;
+}
+
+.right-nav > ul > li:last-of-type {
+    
+    padding: 7px;
+    font-size: 15px;
+}
+.right-nav > ul > li > button:hover{
+    background: $blue;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+
+    background: $dark-gray;
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+    color: black;
+}
+
+// #sections-sidebar-btn:hover {
+// }
