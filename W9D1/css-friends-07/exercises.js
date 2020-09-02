@@ -114,11 +114,10 @@ Function.prototype.curry = function(numArgs) {
     return function _curriedSum(el) {
         args.push(el)
         if (args.length === numArgs) {
-           return func(args);
+           return func(...args);
         } else {
-            return _curriedSum(el);
+            return _curriedSum;
         }
-        return _curriedSum(el);
     }
    
 }
@@ -129,6 +128,10 @@ let subtract3 = function(num3, num2, num1) {
     result -= num1;
     return result;
 }
+
+const curriedSubtract = subtract3.curry(3)
+
+curriedSubtract(10)(5)(3)
 
 // console.log(subtract3(10,5,2))
 // const cSum = Function.prototype.curry(4);
