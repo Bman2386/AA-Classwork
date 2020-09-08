@@ -1,0 +1,20 @@
+h1 {
+    color: blueviolet;
+    font-size: larger;
+    font-weight: 900;
+}
+body {
+    background-color: cyan;
+    font-style: oblique;
+}
+
+#clock {
+    color: gold;
+    background-color: black;
+    padding: 5px;
+    width: 80px;
+}
+
+* {
+    border: 1px, solid, purple;
+}

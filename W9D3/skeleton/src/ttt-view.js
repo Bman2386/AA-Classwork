@@ -4,7 +4,7 @@ class View {
     this.game = game;
     this.$el = $el;
     this.setupBoard();
-    // this.bindEvents() 
+    this.bindEvents();
   }
 
   bindEvents() {
@@ -27,7 +27,7 @@ class View {
     $square.addClass(currentPlayer);
 
     if (this.game.isOver()) {
-      // cleanup click handlers.
+      
       this.$el.off("click");
       this.$el.addClass("game-over");
 
@@ -44,7 +44,6 @@ class View {
       this.$el.append($figcaption);
     }
   }
-  }
   
   setupBoard() {
     const $ul = $('<ul>');
@@ -53,10 +52,11 @@ class View {
         let $li = $('<li>');
         $li.data("pos", [row, col]);
 
-        $ul.append($li)
+        $ul.append($li);
       }
     }
   this.$el.append($ul);
+  }
 }
-// 
+
 module.exports = View;
