@@ -90,3 +90,6 @@ print(string)
 # Null in Python is None
 print(True and False) # prints false
 # print(true && false) creates syntax error even though python still uses &&, ||, and !
+
+print (2 == 2.0)    # => True
+print (2 is 2.0)    # => False

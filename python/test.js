@@ -50,3 +50,31 @@ function dec2bin(dec){
    
     return count
 }
+
+function rotate(a, k){
+    if (k > 0 && a.length > 1){
+      let b = a.pop()
+     a.unshift(b)  
+    return rotate(a, k - 1)
+    } else {
+        return a
+    }
+}
+
+function odd(arr){
+    let hash = {};
+    let ans;
+    for (let i = 0; i < arr.length; i++){
+        let temp = arr[i]
+        if (hash[temp]){
+            hash[temp].push(i)
+        } else {
+            hash[temp] = [i]
+        }
+        if (hash[temp].length === 1){
+            ans = temp
+        }
+    }
+    return ans
+    
+}
