@@ -89,7 +89,11 @@ print(string)
 
 # Null in Python is None
 print(True and False) # prints false
-# print(true && false) creates syntax error even though python still uses &&, ||, and !
+# print(true && false) creates syntax error even though python still uses &&, ||, and !print(a == not b)    # => SyntaxError
 
 print (2 == 2.0)    # => True
 print (2 is 2.0)    # => False
+# Consider this cases where a = 4 and b = 5.
+print(not a == b)     # => True
+#print(a == not b)    # => SyntaxError
+print (a == (not b))    # => False
