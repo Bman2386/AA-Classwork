@@ -115,3 +115,10 @@ if num > 1:
 
 else:
   print(num,"is not a prime number")
+
+  if name == 'Monica':
+    print('Hi, Monica.')
+elif age < 12:
+    print('You are not Monica, kiddo.')
+else:
+    print('You are neither Monica nor a little kid.')
