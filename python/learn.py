@@ -122,3 +122,10 @@ elif age < 12:
     print('You are not Monica, kiddo.')
 else:
     print('You are neither Monica nor a little kid.')
+
+    spam = 0
+while True:
+  print('Hello, world.')
+  spam = spam + 1
+  if spam >= 5:
+    break
