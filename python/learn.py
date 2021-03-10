@@ -129,3 +129,9 @@ while True:
   spam = spam + 1
   if spam >= 5:
     break
+
+#   It may help you to remember this order by thinking of arithmetic expressions and their order of evaluation.
+
+# Negative signs (not) are applied first (part of each number)
+# Multiplication and division (and) happen next
+# Addition and subtraction (or) are the last step
