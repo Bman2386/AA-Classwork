@@ -135,3 +135,13 @@ while True:
 # Negative signs (not) are applied first (part of each number)
 # Multiplication and division (and) happen next
 # Addition and subtraction (or) are the last step
+
+a = 321
+try:
+    print(len(a))
+except:
+    print('Silently handle error here')
+
+    # Optionally include a correction to the issue
+    a = str(a)
+    print(len(a))
