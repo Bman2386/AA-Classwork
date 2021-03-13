@@ -145,3 +145,13 @@ except:
     # Optionally include a correction to the issue
     a = str(a)
     print(len(a))
+
+    def divide(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print("Cannot divide by zero")
+    else:
+        print("Result is", result)
+    finally:
+        print("Finally...")
