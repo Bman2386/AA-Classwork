@@ -155,3 +155,21 @@ except:
         print("Result is", result)
     finally:
         print("Finally...")
+
+
+# tuple of file names
+files = ('one.txt', 'two.txt', 'three.txt')
+
+# simple loop
+for filename in files:
+    try:
+        # open the file in read mode
+        f = open(filename, 'r')
+    except OSError:
+        # handle the case where file does not exist or permission is denied
+        print('cannot open file', filename)
+    else:
+        # do stuff with the file object (f)
+        print(filename, 'opened successfully')
+        print('found', len(f.readlines()), 'lines')
+        f.close()
