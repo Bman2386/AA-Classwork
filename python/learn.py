@@ -173,3 +173,13 @@ for filename in files:
         print(filename, 'opened successfully')
         print('found', len(f.readlines()), 'lines')
         f.close()
+
+# Try a number - nothing will print out
+a = 321
+if hasattr(a, '__len__'):
+    print(len(a))
+
+# Try a string - the length will print out (4 in this case)
+b = "5555"
+if hasattr(b, '__len__'):
+    print(len(b))
