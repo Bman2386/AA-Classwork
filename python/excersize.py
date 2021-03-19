@@ -126,3 +126,102 @@ print(And(True, False))    #> False
 print(And(True, True))     #> True
 print(And(False, True))    #> False
 print(And(False, False))   #> False
+
+# Write your function, here.
+def long_burp(n):
+  return 'Bu'+ ('r'*n) + 'p'
+  
+
+
+print(long_burp(3))  #> "Burrrp"
+print(long_burp(5))  #> "Burrrrrp"
+print(long_burp(9))  #> "Burrrrrrrrrp"
+
+# Write your function, here.
+def cap_space(string):
+	ans = ""
+  i = 0
+  while i < len(string):
+		if string[i].isupper():
+        	ans += " "
+        ans += string[i]
+    i += 1
+    return ans.lower()
+      
+            
+
+
+print(cap_space("helloWorld"))     #> "hello world"
+print(cap_space("iLoveMyTeapot"))  #> "i love my teapot"
+print(cap_space("stayIndoors"))    #> "stay indoors"
+
+# Write your function, here.
+def concat_name(n1, n2):
+  return n2 + ', ' + n1 
+
+
+print(concat_name("First", "Last"))  #> "Last, First"
+print(concat_name("John", "Doe"))    #> "Doe, John"
+print(concat_name("Mary", "Jane"))   #> "Jane, Mary"
+
+# Write your function, here.
+def char_count(c, s):
+  count = 0
+  i = 0
+  while i < len(s):
+    if s[i] == c:
+      count += 1
+    i += 1
+  return count
+
+
+
+print(char_count("a", "App Academy"))         #> 1
+print(char_count("c", "Chamber of Secrets"))  #> 1
+print(char_count("b", "big fat bubble"))      #> 4
+
+#also 
+# def char_count(c, s):
+#   count = 0
+#   for x in s:
+#     if c == x:
+#       count += 1
+#   return count
+
+def factorial(n):
+    ans = 1
+    for i in range(1, n + 1):
+        ans *= i
+    return ans
+
+print(factorial(1))     #> 1
+print(factorial(8))     #> 40320
+print(factorial(12))    #> 479001600
+
+
+# Write your function, here.
+def divisible_by_five(n):
+  return n % 5 == 0
+
+
+print(divisible_by_five(5))    #> True
+print(divisible_by_five(-55))  #> True
+print(divisible_by_five(37))   #> False
+
+# Write your function, here.
+def is_last_character_n(s):
+  return s[-1] == 'n'
+
+
+print(is_last_character_n("Aiden"))  #> True
+print(is_last_character_n("Piet"))   #> False
+print(is_last_character_n("Bert"))   #> False
+print(is_last_character_n("Dean"))   #> True
+
+# Write your function, here.
+
+compare = lambda s1, s2: len(s1) == len(s2)
+
+print(compare("AB", "CD"))              #> True
+print(compare("ABC", "DE"))             #> False
+print(compare("hello", "App Academy"))  #> False
