@@ -137,16 +137,16 @@ print(long_burp(3))  #> "Burrrp"
 print(long_burp(5))  #> "Burrrrrp"
 print(long_burp(9))  #> "Burrrrrrrrrp"
 
-# Write your function, here.
-def cap_space(string):
-	ans = ""
-  i = 0
-  while i < len(string):
-		if string[i].isupper():
-        	ans += " "
-        ans += string[i]
-    i += 1
-    return ans.lower()
+# # Write your function, here.
+# def cap_space(string):
+# 	ans = ""
+#   i = 0
+#   while i < len(string):
+# 		if string[i].isupper():
+#         	ans += " "
+#         ans += string[i]
+#     i += 1
+#     return ans.lower()
       
             
 
@@ -225,3 +225,39 @@ compare = lambda s1, s2: len(s1) == len(s2)
 print(compare("AB", "CD"))              #> True
 print(compare("ABC", "DE"))             #> False
 print(compare("hello", "App Academy"))  #> False
+
+# Write your function, here.
+def is_valid_hex_code(s):
+  if s[0] != '#' or len(s) != 7:
+    return False
+  i = 1
+  while i < len(s):
+    check = s[i].lower()
+    if not check.isdigit():
+      if check != 'a' and check != 'b' and check != 'c' and check != 'd' and check != 'e' and check != 'f':
+        return False
+    i += 1
+  return True
+      
+
+
+
+print(is_valid_hex_code("#CD5C5C")) #> True
+print(is_valid_hex_code("#EAECEE")) #> True
+print(is_valid_hex_code("#eaecee")) #> True
+
+print(is_valid_hex_code("#CD5C58C"))
+# Prints False
+# Length exceeds 6
+
+print(is_valid_hex_code("#CD5C5Z"))
+# Prints False
+# Not all alphabetic characters in A-F
+
+print(is_valid_hex_code("#CD5C&C"))
+# Prints false
+# Contains unacceptable character
+
+print(is_valid_hex_code("CD5C5C"))
+# Prints False
+# Missing #
