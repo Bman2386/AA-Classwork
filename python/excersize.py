@@ -261,3 +261,39 @@ print(is_valid_hex_code("#CD5C&C"))
 print(is_valid_hex_code("CD5C5C"))
 # Prints False
 # Missing #
+# Write your function, here.
+
+def first_before_second(sentence, s1, s2):
+  return sentence.rindex(s1) < sentence.index(s2)
+
+## Here's another variant, with the while loop
+# def first_before_second_while(s, first, second):
+#     first_last_index = 0
+#     second_first_index = 0
+#     i = 0
+#     while i < len(s):
+#         if s[i] == first:
+#             first_last_index = i
+#         i += 1
+#     i = 0
+#     while i < len(s):
+#         if s[i] == second:
+#             second_first_index = i
+#             break
+#         i += 1
+#     return first_last_index < second_first_index
+    
+
+print(first_before_second("a rabbit jumps joyfully", "a", "j"))
+#> True
+# Every instance of "a" occurs before every instance of "j".
+
+print(first_before_second("knaves knew about waterfalls", "k", "w"))
+#> True
+
+print(first_before_second("happy birthday", "a", "y"))
+#> False
+# The "a" in "birthday" occurs after the "y" in "happy".
+
+print(first_before_second("precarious kangaroos", "k", "a"))
+#> False
