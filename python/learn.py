@@ -183,3 +183,15 @@ if hasattr(a, '__len__'):
 b = "5555"
 if hasattr(b, '__len__'):
     print(len(b))
+
+# dictionary = object = hash
+# python        JS       Ruby
+example = {
+    'string':'string of stuff',
+    'list': ['this', 'is', 'a', 'list'],
+    'thing':{
+        'more': 'things',
+        'in':'here'
+    },
+    'tuple':('immutable', 'list')
+}
