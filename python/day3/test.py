@@ -123,3 +123,11 @@ def get_indices(l, var):
         if l[i] == var:
             a.append(i)
     return a
+
+
+# Write your function, here.
+def is_empty(d):
+  return not d
+      
+print(is_empty({}))        #> True
+print(is_empty({"a": 1}))  #> False
