@@ -1,0 +1,17 @@
+### Create Question
+
+POST http://127.0.0.1:5000/api/questions
+Content-Type: application.live
+
+{
+    "name": "Joe Schmo",
+    "text": "testing the 1st post",
+    "repo": "repo",
+    "live": "live"
+}
+
+### View questions
+
+### Edit a question
+
+### Delete a question
