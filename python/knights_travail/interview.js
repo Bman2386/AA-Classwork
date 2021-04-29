@@ -1,32 +1,85 @@
-function getCheapestCost(rootNode) {
-    // your code goes here
-   var total = 0;
-    
-    function depthFirstSearch(node) {
-      // a terminating condition
-      if (node == null) {
-        return;
-      } 
-      else if (node.children.length === 0) {
-        return node.cost;
-      }
-      else {
-        var minCost = MAX_INT;
-        
-        for child in node.children:
-          var tempCost = depthFirstSearch(child)
-          
-          if (tempCost < minCost) {
-            minCost = tempCost;
-          }  
-      }
-      return minCost + node.cost;
-    }
-    
-    depthFirstSearch(rootNode)
-    return total;
-    
+/*
+              Parentnode(0)
+              |       |       |
+            node(5)  node(3)  node(2)
+            |   |
+      node(2)   node(8)
+      Oh, I see! 
+
+      function Node(cost) {
+    this.cost = cost;
+    this.children = [];
   }
+
+  return number
+
+
+//recursive function (node) 
+  if it's a leaf - doesn't have children then we return the cost of the node
+
+  else
+    for each child we find recursively costs
+
+    we choose the min of them and return current-node cost + min value from children
+
+*/
+
+
+function Node(cost) {
+  this.cost = cost;
+  this.children = [];
+}
+
+const parentNode = new Node(0)
+const node1 = new Node(3)
+const node2 = new Node(1)
+const node3 = new Node(4)
+const node4 = new Node(1)
+parentNode.children.push(node1, node2, node3)
+node2.children.push(node4)
+
+function lowestCost (node) {
+  if (!node.children || node.children.length === 0) {
+    return node.cost;
+  } 
+
+  let childrenCosts = node.children.map(child => lowestCost(child));
+
+  let minCost = Math.min(...childrenCosts)
+
+  return node.cost + minCost;
+}
+
+console.log(lowestCost(parentNode));
+// function getCheapestCost(rootNode) {
+//     // your code goes here
+//    var total = 0;
+    
+//     function depthFirstSearch(node) {
+//       // a terminating condition
+//       if (node == null) {
+//         return;
+//       } 
+//       else if (node.children.length === 0) {
+//         return node.cost;
+//       }
+//       else {
+//         var minCost = MAX_INT;
+        
+//         for child in node.children:
+//           var tempCost = depthFirstSearch(child)
+          
+//           if (tempCost < minCost) {
+//             minCost = tempCost;
+//           }  
+//       }
+//       return minCost + node.cost;
+//     }
+    
+//     depthFirstSearch(rootNode)
+//     return total;
+    
+//   }
   
   /******************************************
    * Use the helper code below to implement *
