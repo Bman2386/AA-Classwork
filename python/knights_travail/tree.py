@@ -6,3 +6,4 @@ class Node:
 
     # @property
     # def 
+    #Finish this next week
