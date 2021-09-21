@@ -2,7 +2,7 @@ print("Hello World") # prints Hello World
 
 def multi():
     """
-    Use triple quotes fro multi-
+    Use triple quotes for multi-
     Line
     comments
     """
