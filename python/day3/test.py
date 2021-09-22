@@ -10,8 +10,9 @@ print ('NUMBERS', numbers)
 
 # 1. Print the total number of colors (length of the list)
 
-print (len(colors)
+print (len(colors))
 # 2. Print the first color
+
 print (colors[0])
 
 # 3. Print the second and third colors
@@ -124,7 +125,7 @@ def get_indices(l, var):
             a.append(i)
     return a
 
-
+print(get_indices([0,1,2,'pan'], 'pan')) #[3]
 # Write your function, here.
 def is_empty(d):
   return not d
