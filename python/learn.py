@@ -94,9 +94,9 @@ print(True and False) # prints false
 print (2 == 2.0)    # => True
 print (2 is 2.0)    # => False
 # Consider this cases where a = 4 and b = 5.
-print(not a == b)     # => True
+print(not 'a' == 'b')     # => True
 #print(a == not b)    # => SyntaxError
-print (a == (not b))    # => False
+print ('a' == (not 'b'))    # => False
 # To take input from the user
 num = int(input("Enter a number: "))
 
@@ -116,12 +116,13 @@ if num > 1:
 else:
   print(num,"is not a prime number")
 
-  if name == 'Monica':
-    print('Hi, Monica.')
-elif age < 12:
-    print('You are not Monica, kiddo.')
-else:
-    print('You are neither Monica nor a little kid.')
+def print_name(name, age):
+    if name == 'Monica':
+        print('Hi, Monica.')
+    elif age < 12:
+        print('You are not Monica, kiddo.')
+    else:
+        print('You are neither Monica nor a little kid.')
 
     spam = 0
 while True:
@@ -147,14 +148,14 @@ except:
     print(len(a))
 
     def divide(x, y):
-    try:
-        result = x / y
-    except ZeroDivisionError:
-        print("Cannot divide by zero")
-    else:
-        print("Result is", result)
-    finally:
-        print("Finally...")
+        try:
+            result = x / y
+        except ZeroDivisionError:
+            print("Cannot divide by zero")
+        else:
+            print("Result is", result)
+        finally:
+            print("Finally...")
 
 
 # tuple of file names
