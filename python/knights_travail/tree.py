@@ -7,3 +7,4 @@ class Node:
     # @property
     # def 
     #Finish this next week
+    #need to review classes in python
