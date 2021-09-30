@@ -28,3 +28,17 @@ async function asyncCall() {
 }
 
 asyncCall();
+
+var longestCommonPrefix = function (strs) {
+    if (strs.length < 2) return strs.join('');
+    if (strs[0].length === 0) return "";
+    let prefix = strs[0];
+    for (let i = 1; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) != 0) { // if strs[i] = flow && prefix = flower, strs[i].indexOf(prefix) = -1
+            prefix = prefix.substring(0, (prefix.length - 1)) // removes last letter until prefix is in string
+            if (!prefix) return ""
+        }
+    }
+    return prefix
+};
+
