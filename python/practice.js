@@ -2,6 +2,10 @@ let numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) => a - b);
 console.log(numbers); // [1, 2, 3, 4, 5]
 
+const add = (a, b) => {return a + b}
+console.log(numbers.reduce(add)) //15
+// reduce takes a function to reduce the array with and a variable to add, if null does not add
+
 console.log(Math.min(...numbers)) // 1
 
 console.log(Math.max(...numbers)) // 5
