@@ -24,4 +24,15 @@ const reverseSentence = (sentence) => {
 //     return reversed.join('')
 // }
 console.log(reverseSentence("Let's join the contest") === "s'teL nioj eht tsetnoc");
-console.log(reverseSentence("Let's join the  contest") === "s'teL nioj eht  tsetnoc")
+console.log(reverseSentence("Let's join the  contest") === "s'teL nioj eht  tsetnoc");
+
+var removeOccurrences = function (s, part) {
+
+    while (s.includes(part)) {
+        let idx = s.indexOf(part)
+        let split = s.split('')
+        split.splice(idx, part.length)
+        s = split.join('')
+    }
+    return s
+};
