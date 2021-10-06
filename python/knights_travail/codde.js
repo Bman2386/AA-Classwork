@@ -1,4 +1,3 @@
-// console.log('hello world')
 
 /*
 Given a string containing a sentence, write a method that reverses each word in the sentence,
@@ -16,13 +15,7 @@ const reverseSentence = (sentence) => {
     return reversedSentence.join(' ')
 }
 
-// const reverseWord  = (word) => {
-//     const reversed = [];
-//     for (let i = 0; i < word.length; i++){
-//         reversed.unshift(word[i])
-//     }
-//     return reversed.join('')
-// }
+
 console.log(reverseSentence("Let's join the contest") === "s'teL nioj eht tsetnoc");
 console.log(reverseSentence("Let's join the  contest") === "s'teL nioj eht  tsetnoc");
 
@@ -36,3 +29,4 @@ var removeOccurrences = function (s, part) {
     }
     return s
 };
+
