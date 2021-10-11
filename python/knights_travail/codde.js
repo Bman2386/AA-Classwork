@@ -30,3 +30,17 @@ var removeOccurrences = function (s, part) {
     return s
 };
 
+/*
+Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+The matching should cover the entire input string (not partial).
+*/
+
+var isMatch = function (s, p) {
+    return new RegExp(`^${p}$`).test(s)
+};
+
+console.log('aa', 'a') // false "a" does not match the entire string "aa".
+console.log('aa', 'a*') // true '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
