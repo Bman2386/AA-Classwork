@@ -44,3 +44,24 @@ var isMatch = function (s, p) {
 
 console.log('aa', 'a') // false "a" does not match the entire string "aa".
 console.log('aa', 'a*') // true '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+
+var isValid = function (s) {
+    if (s.length % 2 !== 0) return false
+    const listOpen = ['(', '[', '{'];
+    const listClose = [')', ']', '}'];
+    const stack = [];
+    for (let i = 0; i < s.length; i++) {
+        if (listOpen.includes(s[i])) {
+            stack.push(s[i])
+        }
+        if (listClose.includes(s[i])) {
+            let close = stack[stack.length - 1];
+            if (listOpen.indexOf(close) === listClose.indexOf(s[i])) {
+                stack.pop();
+            } else {
+                return false
+            }
+        }
+    }
+    return stack.length === 0
+};
