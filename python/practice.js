@@ -46,3 +46,4 @@ var longestCommonPrefix = function (strs) {
     return prefix
 };
 
+//add some stuff
